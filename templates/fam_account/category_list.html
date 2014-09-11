@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>users-categories list </title>
+    </head>
+
+    <body>
+        <h1>your fam account</h1>
+        <ul>
+            {% for category in category_list %}
+            <li>
+                {{transaction.note}}
+                 <br>
+                {{transaction.amount}} #or else you can add category also
+            </li>
+            {%endfor %}
+        </ul>
+        FAM  <strong> your transactions ... </strong><br />
+        <a href="/fam_account/list/">List</a><br /> # it make list press-button so you can add page to it
+    </body>
+
+</html>
