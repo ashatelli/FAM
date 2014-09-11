@@ -3,11 +3,12 @@
  {"pk": 2, "model": "fam_account.category", "fields": {"name": "Entertainment"}},
  {"pk": 3, "model": "fam_account.category", "fields": {"name": "health Care"}},
 
- {"pk": 1, "model": "fam_account.choice", "fields": {"category": 1, "name": "fuel"}},
- {"pk": 2, "model": "fam_account.choice", "fields": {"category": 1, "name": "Insurance" }},
- {"pk": 3, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
- {"pk": 4, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
- {"pk": 5, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
+ {"pk": 1, "model": "fam_account.choice", "fields": {"category": 1, "name": "AAA or RoadServices"}},
+ {"pk": 2, "model": "fam_account.choice", "fields": {"category": 1, "name": "fuel"}},
+ {"pk": 3, "model": "fam_account.choice", "fields": {"category": 1, "name": "Insurance" }},
+ {"pk": 4, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
+ {"pk": 5, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
+ {"pk": 6, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
 
  {"pk": 1, "model": "fam_account.vendor", "fields": {"name": "Amazon"}}
  ]
