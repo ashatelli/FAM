@@ -30,12 +30,12 @@ class Vendor(models.Model):
 
 class Transaction(models.Model):
     amount = models.FloatField(default=0)
-    choice = models.ForeignKey(Choice)
+    choice = models.ForeignKey(Choice,blank= True, null=True)#parementer says that this field is not mandatory to fill in brower
     vendor = models.ForeignKey(Vendor)
-    note = models.CharField(max_length=200)
+    note = models.CharField(max_length=200,blank=True)#null is only requre for foreigh key
     User = models.ForeignKey(User)
     def __unicode__(self):
-       return self.choice.category+'-'+ str(self.amount)
+       return str(self.choice)+'-'+ str(self.amount)# return line18
 
 
        #return self.amount

@@ -6,9 +6,12 @@
  {"pk": 1, "model": "fam_account.choice", "fields": {"category": 1, "name": "AAA or RoadServices"}},
  {"pk": 2, "model": "fam_account.choice", "fields": {"category": 1, "name": "fuel"}},
  {"pk": 3, "model": "fam_account.choice", "fields": {"category": 1, "name": "Insurance" }},
- {"pk": 4, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
- {"pk": 5, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
- {"pk": 6, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
+ {"pk": 4, "model": "fam_account.choice", "fields": {"category": 1, "name": "Lease"}},
+ {"pk": 5, "model": "fam_account.choice", "fields": {"category": 1, "name": "Maintenance"}},
+ {"pk": 6, "model": "fam_account.choice", "fields": {"category": 1, "name": "Mileage"}},
+ {"pk": 7, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
+ {"pk": 8, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
+ {"pk": 9, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
 
  {"pk": 1, "model": "fam_account.vendor", "fields": {"name": "Amazon"}}
  ]

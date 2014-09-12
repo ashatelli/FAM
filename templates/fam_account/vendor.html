@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Vendor list </title>
+    </head>
+
+    <body>
+        <strong>VENDOR LIST</strong>
+        <ul>
+            {% for category in category_list %}
+            <li>
+                {{transaction.note}}
+                 <br>
+                {{transaction.amount}} #or else you can add category also
+            </li>
+            {%endfor %}
+        </ul>
+
+        <a href="/fam_account/Add option/">Add option</a><br />
+    </body>
+
+</html>

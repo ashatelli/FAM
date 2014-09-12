@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>un_categoriest transaction list </title>
+    </head>
+
+    <body>
+        <h1>your fam account</h1>
+        <ul>
+
+            {% for transaction in uncategory_list %}
+            <li>
+               ZZZZZ
+
+                 <br>
+                {{transaction}}
+                <!--or else you can add category also-->
+            </li>
+            {% endfor %}
+        </ul>
+        FAM  <strong> Un-catogory transaction list </strong><br />
+        <a href="/fam_account/edit_amount/">edit_amount</a><br /> # it make list press-button so you can add page to it
+    </body>
+
+</html>

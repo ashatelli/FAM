@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Total Transaction </title>
+    </head>
+
+    <body>
+        <h1>Total transaction</h1>
+        <ul>
+            {% for list in uncategory_list %}
+            <li>
+                {{transaction.amount}}
+                 <br>
+                {{transaction.category}}
+                {{transaction.vendor}}
+                {{transaction.note}}
+            </li>
+            {%endfor %}
+        </ul>
+        <strong> your pending  transactions  to be added ... </strong><br />
+        <br>
+        <a href="/fam_account/edit_amount/">edit_amount</a>
+
+            <a href="/fam_account/category_list/">category_List</a>
+
+
+            <a href="/fam_account/vendor/">vendor</a>
+        <br/>
+
+
+
+
+                # add optional
+    </body>
+
+</html>

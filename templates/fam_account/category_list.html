@@ -8,11 +8,14 @@
     <body>
         <h1>your fam account</h1>
         <ul>
-            {% for category in category_list %}
+            {% for category in categories %}
+            <!--views-key for v=category_list will loop-->
             <li>
                 {{transaction.note}}
+
                  <br>
-                {{transaction.amount}} #or else you can add category also
+                {{transaction.amount}}
+                <!--or else you can add category also-->
             </li>
             {%endfor %}
         </ul>
