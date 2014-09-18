@@ -34,10 +34,14 @@ class Transaction(models.Model):
     vendor = models.ForeignKey(Vendor)
     note = models.CharField(max_length=200,blank=True)#null is only requre for foreigh key
     User = models.ForeignKey(User)
+    date = models.DateTimeField()
     def __unicode__(self):
        return str(self.choice)+'-'+ str(self.amount)# return line18
 
 
+
+    #ef__unicode__(self):
+    #return self.user,username
        #return self.amount
 #wehen we add amount 666 and note in amazon .it created transaction
 #object... so to diplay our amazon

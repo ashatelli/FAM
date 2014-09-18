@@ -1,7 +1,22 @@
 [
  {"pk": 1, "model": "fam_account.category", "fields": {"name": "Automobile"}},
  {"pk": 2, "model": "fam_account.category", "fields": {"name": "Entertainment"}},
- {"pk": 3, "model": "fam_account.category", "fields": {"name": "health Care"}},
+ {"pk": 3, "model": "fam_account.category", "fields": {"name": "Family"}},
+ {"pk": 4, "model": "fam_account.category", "fields": {"name": "Food"}},
+ {"pk": 5, "model": "fam_account.category", "fields": {"name": "Health Care"}},
+ {"pk": 6, "model": "fam_account.category", "fields": {"name": "Home Office"}},
+ {"pk": 7, "model": "fam_account.category", "fields": {"name": "Household"}},
+ {"pk": 8, "model": "fam_account.category", "fields": {"name": "Insurance"}},
+ {"pk": 9, "model": "fam_account.category", "fields": {"name": "Loan"}},
+ {"pk": 10, "model": "fam_account.category", "fields": {"name": "personal"}},
+ {"pk": 11, "model": "fam_account.category", "fields": {"name": "Other"}},
+ {"pk": 12, "model": "fam_account.category", "fields": {"name": "Tax"}},
+ {"pk": 13, "model": "fam_account.category", "fields": {"name": "Travel"}},
+ {"pk": 14, "model": "fam_account.category", "fields": {"name": "Utility"}},
+ {"pk": 15, "model": "fam_account.category", "fields": {"name": "Vacation"}},
+
+
+
 
  {"pk": 1, "model": "fam_account.choice", "fields": {"category": 1, "name": "AAA or RoadServices"}},
  {"pk": 2, "model": "fam_account.choice", "fields": {"category": 1, "name": "fuel"}},
@@ -9,9 +24,120 @@
  {"pk": 4, "model": "fam_account.choice", "fields": {"category": 1, "name": "Lease"}},
  {"pk": 5, "model": "fam_account.choice", "fields": {"category": 1, "name": "Maintenance"}},
  {"pk": 6, "model": "fam_account.choice", "fields": {"category": 1, "name": "Mileage"}},
- {"pk": 7, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
- {"pk": 8, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
- {"pk": 9, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
+ {"pk": 7, "model": "fam_account.choice", "fields": {"category": 1, "name": "Registration & Tax"}},
+ {"pk": 8, "model": "fam_account.choice", "fields": {"category": 1, "name": "Other"}},
 
- {"pk": 1, "model": "fam_account.vendor", "fields": {"name": "Amazon"}}
+
+ {"pk": 9, "model": "fam_account.choice", "fields": {"category": 2, "name": "concert"}},
+ {"pk": 10, "model": "fam_account.choice", "fields": {"category": 2, "name": "Movies"}},
+ {"pk": 11, "model": "fam_account.choice", "fields": {"category": 2, "name": "party"}},
+ {"pk": 12, "model": "fam_account.choice", "fields": {"category": 2, "name": "Sports"}},
+ {"pk": 13, "model": "fam_account.choice", "fields": {"category": 2, "name": "Other"}},
+
+
+ {"pk": 14, "model": "fam_account.choice", "fields": {"category": 3, "name": "Child Care"}},
+ {"pk": 15, "model": "fam_account.choice", "fields": {"category": 3, "name": "Child Education"}},
+ {"pk": 16, "model": "fam_account.choice", "fields": {"category": 3, "name": "Toy"}},
+ {"pk": 17, "model": "fam_account.choice", "fields": {"category": 3, "name": "Other"}},
+
+
+ {"pk": 18, "model": "fam_account.choice", "fields": {"category": 4, "name": "Groceries"}},
+ {"pk": 19, "model": "fam_account.choice", "fields": {"category": 4, "name": "Restaurant"}},
+ {"pk": 20, "model": "fam_account.choice", "fields": {"category": 4, "name": "Snack"}},
+ {"pk": 21, "model": "fam_account.choice", "fields": {"category": 4, "name": "Other"}},
+
+
+ {"pk": 22, "model": "fam_account.choice", "fields": {"category": 5, "name": "Dental"}},
+ {"pk": 23, "model": "fam_account.choice", "fields": {"category": 5, "name": "Eye Care"}},
+ {"pk": 24, "model": "fam_account.choice", "fields": {"category": 5, "name": "Health Insurance"}},
+ {"pk": 25, "model": "fam_account.choice", "fields": {"category": 5, "name": "Medical"}},
+ {"pk": 26, "model": "fam_account.choice", "fields": {"category": 5, "name": "Nutrition"}},
+ {"pk": 27, "model": "fam_account.choice", "fields": {"category": 5, "name": "Other"}},
+ {"pk": 28, "model": "fam_account.choice", "fields": {"category": 5, "name": "Prescription"}},
+
+
+ {"pk": 29, "model": "fam_account.choice", "fields": {"category": 6, "name": "Computer"}},
+ {"pk": 30, "model": "fam_account.choice", "fields": {"category": 6, "name": "Electronics"}},
+ {"pk": 31, "model": "fam_account.choice", "fields": {"category": 6, "name": "Office Furniture"}},
+ {"pk": 32, "model": "fam_account.choice", "fields": {"category": 6, "name": "Office Supply"}},
+ {"pk": 33, "model": "fam_account.choice", "fields": {"category": 6, "name": "Other"}},
+ {"pk": 34, "model": "fam_account.choice", "fields": {"category": 6, "name": "Stationery"}},
+
+ {"pk": 35, "model": "fam_account.choice", "fields": {"category": 7, "name": "Appliance"}},
+ {"pk": 36, "model": "fam_account.choice", "fields": {"category": 7, "name": "Consumables"}},
+ {"pk": 37, "model": "fam_account.choice", "fields": {"category": 7, "name": "Home maintenance"}},
+ {"pk": 38, "model": "fam_account.choice", "fields": {"category": 7, "name": "Homeowner fees "}},
+ {"pk": 39, "model": "fam_account.choice", "fields": {"category": 7, "name": "Household Tools"}},
+ {"pk": 40, "model": "fam_account.choice", "fields": {"category": 7, "name": "Other"}},
+ {"pk": 41, "model": "fam_account.choice", "fields": {"category": 7, "name": "Miscellaneous Household Items"}},
+ {"pk": 42, "model": "fam_account.choice", "fields": {"category": 7, "name": "Postage"}},
+ {"pk": 43, "model": "fam_account.choice", "fields": {"category": 7, "name": "Rent"}},
+
+ {"pk": 44, "model": "fam_account.choice", "fields": {"category": 8, "name": "Auto"}},
+ {"pk": 45, "model": "fam_account.choice", "fields": {"category": 8, "name": "Health"}},
+ {"pk": 46, "model": "fam_account.choice", "fields": {"category": 8, "name": "home"}},
+ {"pk": 47, "model": "fam_account.choice", "fields": {"category": 8, "name": "life"}},
+ {"pk": 48, "model": "fam_account.choice", "fields": {"category": 8, "name": "Other"}},
+
+ {"pk": 49, "model": "fam_account.choice", "fields": {"category": 9, "name": "Auto"}},
+ {"pk": 50, "model": "fam_account.choice", "fields": {"category": 9, "name": "Home Equity"}},
+ {"pk": 51, "model": "fam_account.choice", "fields": {"category": 9, "name": "Mortgage"}},
+ {"pk": 52, "model": "fam_account.choice", "fields": {"category": 9, "name": "Other"}},
+ {"pk": 53, "model": "fam_account.choice", "fields": {"category": 9, "name": "Gift"}},
+
+
+ {"pk": 54, "model": "fam_account.choice", "fields": {"category": 10, "name": "Other"}},
+ {"pk": 55, "model": "fam_account.choice", "fields": {"category": 10, "name": "Personal Care"}},
+ {"pk": 56, "model": "fam_account.choice", "fields": {"category": 10, "name": "Clothing"}},
+ {"pk": 57, "model": "fam_account.choice", "fields": {"category": 10, "name": "Donation"}},
+ {"pk": 58, "model": "fam_account.choice", "fields": {"category": 10, "name": "Gift"}},
+
+
+ {"pk": 59, "model": "fam_account.choice", "fields": {"category": 11, "name": "Other"}},
+
+ {"pk": 60, "model": "fam_account.choice", "fields": {"category": 12, "name": "property Tax"}},
+ {"pk": 61, "model": "fam_account.choice", "fields": {"category": 12, "name": "Other"}},
+
+ {"pk": 62, "model": "fam_account.choice", "fields": {"category": 13, "name": "Flight"}},
+ {"pk": 63, "model": "fam_account.choice", "fields": {"category": 13, "name": "Car Rental"}},
+ {"pk": 64, "model": "fam_account.choice", "fields": {"category": 13, "name": "Food"}},
+ {"pk": 65, "model": "fam_account.choice", "fields": {"category": 13, "name": "Hotel"}},
+ {"pk": 66, "model": "fam_account.choice", "fields": {"category": 13, "name": "Misc"}},
+ {"pk": 67, "model": "fam_account.choice", "fields": {"category": 13, "name": "Other"}},
+ {"pk": 68, "model": "fam_account.choice", "fields": {"category": 13, "name": "Taxi"}},
+ {"pk": 69, "model": "fam_account.choice", "fields": {"category": 13, "name": "Other Transportation"}},
+
+
+ {"pk": 70, "model": "fam_account.choice", "fields": {"category": 14, "name": "Water"}},
+ {"pk": 71, "model": "fam_account.choice", "fields": {"category": 14, "name": "Cable Tv"}},
+ {"pk": 72, "model": "fam_account.choice", "fields": {"category": 14, "name": "Eletric"}},
+ {"pk": 73, "model": "fam_account.choice", "fields": {"category": 14, "name": "Garbage & Recycling"}},
+ {"pk": 74, "model": "fam_account.choice", "fields": {"category": 14, "name": Gas"}},
+ {"pk": 75, "model": "fam_account.choice", "fields": {"category": 14, "name": "Internet"}},
+ {"pk": 76, "model": "fam_account.choice", "fields": {"category": 14, "name": "Telephone"}},
+
+ {"pk": 77, "model": "fam_account.choice", "fields": {"category": 15, "name": "Flight"}},
+ {"pk": 78, "model": "fam_account.choice", "fields": {"category": 15, "name": "Car Rental"}},
+ {"pk": 79, "model": "fam_account.choice", "fields": {"category": 15, "name": "Food"}},
+ {"pk": 80, "model": "fam_account.choice", "fields": {"category": 15, "name": "Hotel"}},
+ {"pk": 81, "model": "fam_account.choice", "fields": {"category": 15, "name": "Misc"}},
+ {"pk": 82, "model": "fam_account.choice", "fields": {"category": 15, "name": "Other"}},
+ {"pk": 83, "model": "fam_account.choice", "fields": {"category": 15, "name": "Taxi"}},
+ {"pk": 84, "model": "fam_account.choice", "fields": {"category": 15, "name": "Other Transportation"}},
+
+
+
+
+
+
+ {"pk": 1, "model": "fam_account.vendor", "fields": {"name": "Amazon"}},
+ {"pk": 2, "model": "fam_account.vendor", "fields": {"name": "Starbucks"}},
+ {"pk": 3, "model": "fam_account.vendor", "fields": {"name": "Best Buy"}},
+ {"pk": 4, "model": "fam_account.vendor", "fields": {"name": "Castco"}},
+ {"pk": 5, "model": "fam_account.vendor", "fields": {"name": "Walmart"}},
+ {"pk": 6, "model": "fam_account.vendor", "fields": {"name": "Na"}},
+ {"pk": 7, "model": "fam_account.vendor", "fields": {"name": "New Seasons"}},
+ {"pk": 8, "model": "fam_account.vendor", "fields": {"name": "Safeway"}},
+ {"pk": 9, "model": "fam_account.vendor", "fields": {"name": "Fred Meyer"}},
+
  ]

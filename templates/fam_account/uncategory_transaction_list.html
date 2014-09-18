@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>un_categoriest transaction list </title>
-    </head>
+<head>
+    <title>un_categoriest transaction list </title>
+</head>
 
-    <body>
-        <h1>your fam account</h1>
-        <ul>
+<body>
+<h1>your fam account</h1>
+<!--heading makes sentence or letts make big and bold where as <strong> represent onlt bold</strong>-->
+Please complete you transaction
+<ul>
+    <!--unordered list,perants for <li>=-->
 
-            {% for transaction in uncategory_list %}
-            <li>
-               ZZZZZ
 
-                 <br>
-                {{transaction}}
-                <!--or else you can add category also-->
-            </li>
-            {% endfor %}
-        </ul>
-        FAM  <strong> Un-catogory transaction list </strong><br />
-        <a href="/fam_account/edit_amount/">edit_amount</a><br /> # it make list press-button so you can add page to it
-    </body>
+    {% for transaction in uncategory_list %}
+    <li>
+        <!--list item of any kind, created bullet or styles-->
+        <a href="/list/total_transaction/{{transaction.id}}">
+            <!--here abouve line make to click user on amount and vendor .. her direct to total_transaction list-->
+            {{transaction.amount}}
+            {{transaction.vendor}}
+            <a/>
+
+
+            <!--line break-->
+
+            {{transaction.date}}
+            <!--or else you can add category also-->
+    </li>
+    {% endfor %}
+</ul>
+FAM <strong> click on amount and complete your transaction </strong><br/>
+<!--<a href="/fam_account/total_transaction/">total_transaction</a><br/>-->
+<!--it make list press-button so you can add page to-->
+
+</body>
 
 </html>

@@ -1,37 +1,167 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Total Transaction </title>
-    </head>
+<head>
+    <style>
+        body{
+        background-color:grey;
+        }
+        #outside{
+        background-color:white;
+        width:240px;
+        height:320px;
 
-    <body>
-        <h1>Total transaction</h1>
-        <ul>
-            {% for list in uncategory_list %}
-            <li>
-                {{transaction.amount}}
-                 <br>
-                {{transaction.category}}
-                {{transaction.vendor}}
-                {{transaction.note}}
-            </li>
-            {%endfor %}
-        </ul>
-        <strong> your pending  transactions  to be added ... </strong><br />
-        <br>
-        <a href="/fam_account/edit_amount/">edit_amount</a>
+        }
+    </style>
+    <title>Total Transaction </title>
+</head>
 
-            <a href="/fam_account/category_list/">category_List</a>
+<body>
+<div id="outside">
+    <!--div- creating box-->
 
 
-            <a href="/fam_account/vendor/">vendor</a>
-        <br/>
+    <h1>Total transaction</h1>
+
+    <div>
+<span>
+    Account:
+</span>
+    <span>
+        {{Account}}
+    </span>
+    <span>
+        <!--<a href="/fam_account/category_list/{{id}}">-->
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+    </div>
+
+    <div>
+<span>
+    Amount:
+</span>
+    <span>
+        {{ amount }}
+    </span>
+    <span>
+        <a href="/fam_account/edit_amount/{{id}}">
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+    </div>
+
+    <div>
+<span>
+    Category:
+</span>
+    <span>
+        {{category}}
+    </span>
+    <span>
+        <a href="/fam_account/category_list/{{id}}">
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+    </div>
+
+
+    <div>
+<span>
+
+    <div>
+<span>
+    Vendor:
+</span>
+    <span>
+        {{vendor}}
+    </span>
+    <span>
+        <a href="/fam_account/category_list/{{id}}">
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+
+
+        <div>
+<span>
+    Category:
+</span>
+    <span>
+        {{category}}
+    </span>
+    <span>
+        <a href="/fam_account/category_list/{{id}}">
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+        </div>
+        <div>
+<span>
+    Payement:
+</span>
+    <span>
+        {{payment}}
+    </span>
+    <span>
+        <!--<a href="/fam_account/category_list/{{id}}">-->
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+        </div>
+        <div>
+<span>
+    Ref/check no:
+</span>
+    <span>
+        {{total_transaction}}
+    </span>
+    <span>
+        <!--<a href="/fam_account/category_list/{{id}}">-->
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+        </div>
+
+    </div>
+        <div>
+<span>
+    Description:
+</span>
+    <span>
+        {{description}}
+    </span>
+    <span>
+        <!--<a href="/fam_account/category_list/{{id}}">-->
+            E
+            <!--user gonna see letter E-->
+        </a>
+    </span>
+        </div>
 
 
 
 
-                # add optional
-    </body>
+
+
+
+<br>
+<a href="/fam_account/edit_amount/">edit_amount{{ total_transaction__amount }}</a>
+
+<a href="/fam_account/category_list/">category_List</a>
+
+
+<a href="/fam_account/vendor/">vendor{{ total_transaction__vendor }}</a>
+
+    </div>
+
+</body>
 
 </html>
