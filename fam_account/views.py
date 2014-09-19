@@ -1,13 +1,13 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.template import RequestContext
-from fam_account.models import Transaction, Choice,
-# from fam_account.models import User
+from fam_account.models import *
+# import * imports all the models
 
 def user_trans (request):
     context = RequestContext(request)
-    user_trans = ConnectToEmail(User)
-
+    context_dict = {'user_trans': user_trans}
+    return render_to_response('fam_account/user_trans.html', context_dict,context)
 
 
 def index(request):
@@ -16,24 +16,33 @@ def index(request):
     return render_to_response('fam_account/index.html', context_dict, context)
 
 
-def list(request):
+def list(request,id):
     context = RequestContext(request)
     transaction_list = Transaction.objects.order_by('choice__category__name')
-    context_dict = {'transactions': transaction_list}
+    context_dict = {
+        'transactions': transaction_list,
+        'id':id,
+        }
     return render_to_response('fam_account/list.html', context_dict, context)
 
-def category_list(request):
+def category_list(request,id):
     context = RequestContext(request)
     category_list = Choice.objects.all()
-    context_dict = {'categories': category_list}
+    context_dict = {
+        'category_list': category_list,
+        'id':id,
+        }
     return render_to_response('fam_account/category_list.html', context_dict, context)
 
 
-def uncategory_list(request):
+def uncategory_list(request,id):
     context = RequestContext(request)
     uncategory_list = Transaction.objects.filter(choice__isnull=True)
     #uncategory_list= Transaction.objects.all()
-    context_dict = {'uncategory_list': uncategory_list}
+    context_dict = {
+        'uncategory_list': uncategory_list,
+        'id': id,
+        }
     return render_to_response('fam_account/uncategory_transaction_list.html', context_dict, context)
 
 
@@ -51,14 +60,31 @@ def total_transaction(request, id):
     return render_to_response('fam_account/total_transaction.html', context_dict, context)
 
 
-def edit_amount(request, ):
+def edit_amount(request,id ):
     context = RequestContext(request)
-    context_dict = {'calculator': edit_amount}
+    context_dict = {
+        'calculator': edit_amount,
+        'id' : id,
+
+        }
     return render_to_response('fam_account/edit_amount.html', context_dict, context)
 
 
-def vendor(request):
+def vendor(request,id):
     context = RequestContext(request)
-    context_dict = {'vendor': vendor}
-    #vendor_list= vendor.objects.all()
+    vendor= Vendor.objects.all()
+    context_dict = {
+        'vendor': vendor,
+        'id':id,
+        }
     return render_to_response('fam_account/vendor.html', context_dict, context)
+
+def add_vendor(request,id):
+    context = RequestContext(request)
+    context_dic = {
+        'add_vendor':add_vendor,
+        'id': id,
+        }
+    return render_to_response('fam_account/add_vendor.html',context_dic,context)
+
+

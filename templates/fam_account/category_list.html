@@ -6,21 +6,25 @@
     </head>
 
     <body>
+
         <h1>your fam account</h1>
         <ul>
-            {% for category in categories %}
+            {% for choice in category_list %}
             <!--views-key for v=category_list will loop-->
             <li>
-                {{transaction.note}}
+                {{choice.category.name}}
+                -
+                {{choice.name}}
 
                  <br>
-                {{transaction.amount}}
+                <!--{{transaction.amount}}-->
                 <!--or else you can add category also-->
             </li>
             {%endfor %}
         </ul>
         FAM  <strong> your transactions ... </strong><br />
-        <a href="/fam_account/list/">List</a><br /> # it make list press-button so you can add page to it
+
+        <!--it make list press-button so you can add page to it-->
     </body>
 
 </html>

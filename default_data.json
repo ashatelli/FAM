@@ -112,7 +112,7 @@
  {"pk": 71, "model": "fam_account.choice", "fields": {"category": 14, "name": "Cable Tv"}},
  {"pk": 72, "model": "fam_account.choice", "fields": {"category": 14, "name": "Eletric"}},
  {"pk": 73, "model": "fam_account.choice", "fields": {"category": 14, "name": "Garbage & Recycling"}},
- {"pk": 74, "model": "fam_account.choice", "fields": {"category": 14, "name": Gas"}},
+ {"pk": 74, "model": "fam_account.choice", "fields": {"category": 14, "name": "Gas"}},
  {"pk": 75, "model": "fam_account.choice", "fields": {"category": 14, "name": "Internet"}},
  {"pk": 76, "model": "fam_account.choice", "fields": {"category": 14, "name": "Telephone"}},
 
@@ -138,6 +138,6 @@
  {"pk": 6, "model": "fam_account.vendor", "fields": {"name": "Na"}},
  {"pk": 7, "model": "fam_account.vendor", "fields": {"name": "New Seasons"}},
  {"pk": 8, "model": "fam_account.vendor", "fields": {"name": "Safeway"}},
- {"pk": 9, "model": "fam_account.vendor", "fields": {"name": "Fred Meyer"}},
+ {"pk": 9, "model": "fam_account.vendor", "fields": {"name": "Fred Meyer"}}
 
  ]
