@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Vendor list </title>
-    </head>
+<head>
+    <style>
+        body{
+        background-color:grey;
+        }
+        #outside{
+        background-color:white;
+        width:250px;
+        height:350px;
 
 
-    <body>
-        <strong>VENDOR LIST</strong>
-        <ul>
-            {% for vendor in vendor %}
-            <li>
-                {{vendor.name}}
-            {%endfor %}
-        </ul>
-         <br>
+        }
+        #outside div span {
+        width :30%;
+        text-decoration: underline;
+        display:inline-block;
+        }
 
-        <a href="/fam_account/Add_option/">Add option</a><br />
+    </style>
+    <title>Vendor list </title>
+</head>
 
-    </body>
+
+<body>
+<strong>VENDOR LIST</strong>
+<ul>
+    {% for vendor in vendor %}
+    <li>
+        {{vendor.name}}
+
+        <!--<style="text-align:left"></style>-->
+        {%endfor %}
+</ul>
+<br>
+
+<a href="/fam_account/Add_option/">Add option</a><br/>
+
+</body>
 
 </html>

@@ -8,20 +8,31 @@
     <body>
 
         <h1>your fam account</h1>
-        <ul>
-            {% for choice in category_list %}
+        <FORM name="Keypad" action="/category_list/{{id}}" method="post">
+         {% csrf_token %}
+        <select name="choice">
+        <select name="choice">
+
+        {% for choice in category_list %}
             <!--views-key for v=category_list will loop-->
-            <li>
+            <option value="{{choice.id}}">
                 {{choice.category.name}}
                 -
                 {{choice.name}}
 
-                 <br>
+
                 <!--{{transaction.amount}}-->
                 <!--or else you can add category also-->
-            </li>
+            </option>
+
+
+
             {%endfor %}
-        </ul>
+        </select>
+        <br>
+        <button type="save" value="Save">Save</li></button>
+        </FORM>
+
         FAM  <strong> your transactions ... </strong><br />
 
         <!--it make list press-button so you can add page to it-->

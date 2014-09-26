@@ -1,6 +1,7 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response,redirect
 from django.http import HttpResponse
 from django.template import RequestContext
+
 from fam_account.models import *
 # import * imports all the models
 
@@ -26,13 +27,26 @@ def list(request,id):
     return render_to_response('fam_account/list.html', context_dict, context)
 
 def category_list(request,id):
-    context = RequestContext(request)
-    category_list = Choice.objects.all()
-    context_dict = {
-        'category_list': category_list,
-        'id':id,
-        }
-    return render_to_response('fam_account/category_list.html', context_dict, context)
+     if request.method=="POST":
+        choice=request.POST["category"]
+        print choice
+        total_transaction = Transaction.objects.get(pk=id)
+        c = Choice.objects.get(pk=choice)
+        #print c
+        total_transaction.choice=c
+        total_transaction.save()
+
+
+        return redirect('total_transaction', id=id)
+     else:
+
+        context = RequestContext(request)
+        category_list = Choice.objects.all()
+        context_dict = {
+            'category_list': category_list,
+            'id':id,
+            }
+        return render_to_response('fam_account/category_list.html', context_dict, context)
 
 
 def uncategory_list(request,id):
@@ -53,7 +67,9 @@ def total_transaction(request, id):
         'total_transaction ': total_transaction,
         'id': id,
         'amount': total_transaction.amount,
-        'date' :total_transaction.date
+        'date' :total_transaction.date,
+        'choice':total_transaction.choice,
+        # in green words we can pul out in templates
 
     }
 
@@ -61,13 +77,25 @@ def total_transaction(request, id):
 
 
 def edit_amount(request,id ):
-    context = RequestContext(request)
-    context_dict = {
-        'calculator': edit_amount,
-        'id' : id,
+    if request.method=="POST":
+        amount=request.POST["amount"]
+        print amount
+        total_transaction = Transaction.objects.get(pk=id)
+        total_transaction.amount= amount
+        total_transaction.save()
+        return redirect('total_transaction', id=id)
 
-        }
-    return render_to_response('fam_account/edit_amount.html', context_dict, context)
+
+    else:
+
+        context = RequestContext(request)
+        total_transaction = Transaction.objects.get(pk=id)
+        context_dict = {
+            'transaction': total_transaction,
+            'id' : id,
+
+            }
+        return render_to_response('fam_account/edit_amount.html', context_dict, context)
 
 
 def vendor(request,id):
