@@ -135,9 +135,9 @@
  {"pk": 3, "model": "fam_account.vendor", "fields": {"name": "Best Buy"}},
  {"pk": 4, "model": "fam_account.vendor", "fields": {"name": "Castco"}},
  {"pk": 5, "model": "fam_account.vendor", "fields": {"name": "Walmart"}},
- {"pk": 6, "model": "fam_account.vendor", "fields": {"name": "Na"}},
- {"pk": 7, "model": "fam_account.vendor", "fields": {"name": "New Seasons"}},
- {"pk": 8, "model": "fam_account.vendor", "fields": {"name": "Safeway"}},
- {"pk": 9, "model": "fam_account.vendor", "fields": {"name": "Fred Meyer"}}
+ {"pk": 6, "model": "fam_account.vendor", "fields": {"name": "New Seasons"}},
+ {"pk": 7, "model": "fam_account.vendor", "fields": {"name": "Safeway"}},
+ {"pk": 8, "model": "fam_account.vendor", "fields": {"name": "Fred Meyer"}},
+ {"pk": 9, "model": "fam_account.vendor", "fields": {"name": "Other"}}
 
  ]

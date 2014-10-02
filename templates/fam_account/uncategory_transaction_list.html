@@ -2,11 +2,21 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="/static/main.css">
+    <style>
+        #outside body {
+        display: inline-block;
+        background-color: white;
+        width: 100px;
+        text-align: center;
+        margin: 12px;
+        }
+    </style>
     <title>un_categoriest transaction list </title>
 </head>
 
 <body>
-<h1 style="background:yellow;font-size:35px;color:brown">your fam account</h1>
+<h1>your fam account</h1>
 <!--heading makes sentence or letts make big and bold where as <strong> represent onlt bold</strong>-->
 Please complete you transaction
 <ul>
@@ -18,23 +28,25 @@ Please complete you transaction
         <!--list item of any kind, created bullet or styles-->
         <a href="/list/total_transaction/{{transaction.id}}">
             <!--here abouve line make to click user on amount and vendor .. her direct to total_transaction list-->
+
+                {{transaction.amount}}
+                {{transaction.vendor}}
+
+            </a>
             <em>
-            {{transaction.amount}}
-            {{transaction.vendor}}
-            <a/>
-
-
-            <!--line break-->
-
-            {{transaction.date}}
+                {{transaction.date}}
             </em>
-            <!--or else you can add category also-->
+
+
+
+
+
+        <!--line break-->
+
+        <!--or else you can add category also-->
     </li>
     {% endfor %}
 </ul>
-FAM <strong></strong><br/>
-<!--<a href="/fam_account/total_transaction/">total_transaction</a><br/>-->
-<!--it make list press-button so you can add page to-->
 
 </body>
 

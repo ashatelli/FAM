@@ -3,40 +3,61 @@
 
 <head>
     <style>
-        body{
-        background-color:grey;
-        }
-        #outside{
-        background-color:white;
-        width:250px;
-        height:350px;
+        <link rel="stylesheet" href="/static/main.css">
+        <!--body{-->
+        <!--background-color:grey;-->
+        <!--}-->
+        <!--#outside{-->
+        <!--background-color:white;-->
+        <!--width:250px;-->
+        <!--height:350px;-->
 
 
-        }
-        #outside div span {
-        width :30%;
-        text-decoration: underline;
-        display:inline-block;
-        }
+        <!--}-->
+        <!--#outside div span {-->
+        <!--width :30%;-->
+        <!--text-decoration: underline;-->
+        <!--display:inline-block;-->
+        <!--}-->
 
     </style>
     <title>Vendor list </title>
+    <script>
+        function select(id){
+        var i = document.getElementById("selected");
+        i.value= id;
+        var e=document.getElementById("edit");
+        e.submit()
+
+        }
+    </script>
 </head>
 
 
 <body>
 <strong>VENDOR LIST</strong>
-<ul>
-    {% for vendor in vendor %}
-    <li>
-        {{vendor.name}}
 
-        <!--<style="text-align:left"></style>-->
-        {%endfor %}
-</ul>
-<br>
+<FORM name="edit" action="/total_transaction/vendor/{{id}}" method="post">
+    {% csrf_token %}
+    <input type="hidden" value="0" name="vendor" id="selected">
 
-<a href="/fam_account/Add_option/">Add option</a><br/>
+    <!--line 26-->
+    <ul>
+        {% for vendor in vendor %}
+        <li>
+
+            <button onclick="select({{vendor.id}})">{{vendor.name}}</button> <button class="Delete">X</button>
+            </li>
+
+
+            {%endfor %}
+
+    </ul>
+    <br>
+
+    <a href="/fam_account/Add_option/">Add option</a><br/>
+</FORM>
+
 
 </body>
 

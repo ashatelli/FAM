@@ -28,7 +28,7 @@ def list(request,id):
 
 def category_list(request,id):
      if request.method=="POST":
-        choice=request.POST["category"]
+        choice=request.POST["choice"]
         print choice
         total_transaction = Transaction.objects.get(pk=id)
         c = Choice.objects.get(pk=choice)
@@ -69,6 +69,7 @@ def total_transaction(request, id):
         'amount': total_transaction.amount,
         'date' :total_transaction.date,
         'choice':total_transaction.choice,
+        'vendor':total_transaction.vendor,
         # in green words we can pul out in templates
 
     }
@@ -99,13 +100,23 @@ def edit_amount(request,id ):
 
 
 def vendor(request,id):
-    context = RequestContext(request)
-    vendor= Vendor.objects.all()
-    context_dict = {
-        'vendor': vendor,
-        'id':id,
-        }
-    return render_to_response('fam_account/vendor.html', context_dict, context)
+    if request.method=="POST":
+        vendor=request.POST["vendor"]
+        print vendor
+        total_transaction= Transaction.objects.get(pk=id)
+        v = Vendor.objects.get(pk=vendor)
+        total_transaction.vendor= v
+        total_transaction.save()
+        return redirect('total_transaction', id=id)
+
+    else:
+        context = RequestContext(request)
+        vendor= Vendor.objects.all()
+        context_dict = {
+            'vendor': vendor,
+            'id':id,
+            }
+        return render_to_response('fam_account/vendor.html', context_dict, context)
 
 def add_vendor(request,id):
     context = RequestContext(request)

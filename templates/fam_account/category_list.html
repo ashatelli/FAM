@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>users-categories list </title>
-    </head>
+<head>
 
-    <body>
+     <link rel="stylesheet" href="/static/main.css">
+    <!--<style>-->
+        <!--body {-->
+    <!--background-color:#666666;-->
+    <!--margin:0;-->
+<!--}-->
 
-        <h1>your fam account</h1>
-        <FORM name="Keypad" action="/category_list/{{id}}" method="post">
-         {% csrf_token %}
-        <select name="choice">
-        <select name="choice">
+        <!--#outside{-->
+        <!--background-color:#208889;-->
+        <!--width:300px;-->
+        <!--height:450px;-->
 
-        {% for choice in category_list %}
+
+        <!--}-->
+        <!--#outside FORM span {-->
+        <!--width :30%;-->
+        <!--text-decoration: underline;-->
+        <!--display:inline-block;-->
+        <!--}-->
+    <!--</style>-->
+    <title>users-categories list </title>
+</head>
+
+<body>
+<div id ="outside">
+<h1>your fam account</h1>
+
+<FORM name="Keypad" action="/category_list/{{id}}" method="post">
+    {% csrf_token %}
+    <select name="choice">
+        <!--<select name="choice">-->
+
+            {% for choice in category_list %}
             <!--views-key for v=category_list will loop-->
             <option value="{{choice.id}}">
                 {{choice.category.name}}
@@ -26,16 +48,15 @@
             </option>
 
 
-
             {%endfor %}
         </select>
-        <br>
+        <!--</select>-->
         <button type="save" value="Save">Save</li></button>
-        </FORM>
+</FORM>
 
-        FAM  <strong> your transactions ... </strong><br />
+</div>
 
-        <!--it make list press-button so you can add page to it-->
-    </body>
+<!--it make list press-button so you can add page to it-->
+</body>
 
 </html>
